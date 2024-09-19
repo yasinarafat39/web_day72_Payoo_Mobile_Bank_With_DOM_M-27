@@ -8,15 +8,33 @@ document.getElementById("addMoneyBtn").addEventListener('click', function(event)
     // step-1: 
 
     // input money for add
-    const addMoneyInput = document.getElementById('addMoneyInput');
-    const addMoneyInputValue = Number(addMoneyInput.value);
+    const addMoneyInputField = document.getElementById('addMoneyInput');
+    const addMoneyInputValue = parseFloat(addMoneyInputField.value);
     
     
     // pin number
-    const pinNumber = document.getElementById('pinNumber');
-    const pinNumberValue = pinNumber.value;
+    const pinNumberField = document.getElementById('pinNumber');
+    const pinNumberValue = pinNumberField.value;
     
-    console.log(addMoneyInputValue, pinNumberValue)
-    addMoneyInput.value = '';
-    pinNumber.value = '';
+
+    // get current amount
+    const currentAmountField = document.getElementById('currentAmount');
+    const cureentAmount = parseFloat(currentAmountField.innerText);
+
+
+    // verify pin number
+    if(pinNumberValue === "12345"){
+        if(addMoneyInputValue > 0){
+            const newBalance = cureentAmount + addMoneyInputValue; 
+            currentAmountField.innerText = newBalance;
+        } else{
+            alert("Please provide a valid amount.")
+        }
+    } else{
+        alert("Incurrect PIN");
+    }
+
+    console.log(addMoneyInputValue, pinNumberValue, cureentAmount)
+    addMoneyInputField.value = '';
+    pinNumberField.value = '';
 })
