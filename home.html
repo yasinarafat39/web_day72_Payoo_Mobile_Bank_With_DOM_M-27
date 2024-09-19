@@ -24,7 +24,9 @@
 
             <div class="bg-white p-3 rounded-lg">
               <div class="text-center text-2xl font-bold">45,000</div>
-              <div class="text-center text-xs text-gray-400">Available Balance</div>
+              <div class="text-center text-xs text-gray-400">
+                Available Balance
+              </div>
             </div>
 
             <div class="divider"></div>
@@ -36,7 +38,7 @@
               <button class="btn inline">Add Money</button>
             </div>
             <!-- user action button end -->
-            <div class="divider"></div>
+            <div class="divider text-xs text-gray-400">Add Money</div>
 
             <form class="card-body p-0 w-10/12">
               <div class="form-control">
@@ -44,6 +46,7 @@
                   <span class="label-text">Amount</span>
                 </label>
                 <input
+                  id="addMoneyInput"
                   type="number"
                   placeholder="amount"
                   class="input input-bordered"
@@ -55,6 +58,7 @@
                   <span class="label-text">Pin</span>
                 </label>
                 <input
+                  id="pinNumber"
                   type="password"
                   placeholder="Your Pin"
                   class="input input-bordered"
@@ -62,12 +66,16 @@
                 />
               </div>
               <div class="form-control mt-6">
-                <button class="btn btn-primary">Add Money</button>
+                <button id="addMoneyBtn" class="btn btn-primary">
+                  Add Money
+                </button>
               </div>
             </form>
           </div>
         </div>
       </div>
+
+      <script src="./js/home.js"></script>
     </main>
   </body>
 </html>
