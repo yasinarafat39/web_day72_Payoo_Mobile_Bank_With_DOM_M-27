@@ -7,16 +7,23 @@ document.getElementById("btnLogin").addEventListener("click", function (event) {
   const phoneNumber = phoneNumberField.value;
   const pinNumberField = document.getElementById("pinNumber");
   const pinNumber = pinNumberField.value;
-  console.log(phoneNumber, pinNumber);
 
-  // this is temporary
-  if (phoneNumber === "01817482739" && pinNumber === "12345") {
-    console.log("you are logged in");
-    window.location.href = "/home.html";
+  
+  // can not submit empty form
+  const inputs = document.querySelectorAll("input");
+
+  if (inputs[0].value === "" || inputs[1].value === "") {
+    alert("Phone number and PIN number cannot be empty");
   } else {
-    alert("Please provide a valid Phone NUmber and Pin");
-  }
+    // this is temporary
+    if (phoneNumber === "01817482739" && pinNumber === "12345") {
+      console.log("you are logged in");
+      window.location.href = "/home.html";
+    } else {
+      alert("Please provide a valid Phone Number and Pin");
+    }
 
-  phoneNumberField.value = "";
-  pinNumberField.value = "";
+    phoneNumberField.value = "";
+    pinNumberField.value = "";
+  } 
 });
