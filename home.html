@@ -17,29 +17,32 @@
       <div class="mockup-phone">
         <div class="camera"></div>
         <div class="display">
-          <div class="artboard artboard-demo phone-1 pt-12">
+          <div class="artboard artboard-demo phone-3 pt-12 justify-start">
             <!-- code here -->
 
             <!-- main balance -->
 
             <div class="bg-white p-3 rounded-lg">
-              <p id="currentAmount" class="text-center text-2xl font-bold">45000</p>
-              <p class="text-center text-xs text-gray-400">
-                Available Balance
+              <p id="currentAmount" class="text-center text-2xl font-bold">
+                45000
               </p>
+              <p class="text-center text-xs text-gray-400">Available Balance</p>
             </div>
 
             <div class="divider"></div>
             <!-- --------------------->
 
             <!-- user action button start -->
-            <div class="flex">
-              <button id="btnShowAddMoney" class="btn inline mr-7">Add Money</button>
+            <div class="flex flex-wrap gap-4 m-4">
+              <button id="btnShowAddMoney" class="btn inline">Add Money</button>
               <button id="btnShowCashOut" class="btn inline">Cash Out</button>
+              <button id="btnTransaction" class="btn inline">Transactions</button>
             </div>
             <!-- user action button end -->
-            <div id="addMoneyDevider" class="divider text-xs text-gray-400">Add Money</div> <!-- devider --> 
-            <div id="cashOutDevider" class="divider text-xs text-gray-400 hidden">Cash Out</div> <!-- devider --> 
+           
+            <!-- devider -->
+            <div id="devider" class="divider text-xs text-gray-400">Add Money</div>
+            
 
             <!-- add money form start -->
             <form id="addMoneyForm" class="card-body p-0 w-10/12">
@@ -108,15 +111,21 @@
               </div>
             </form>
             <!-- cash out form end -->
+
+            <!-- transaction section start -->
+            <div id="transactionSection">
+              <h1 class="text-5xl text-center hidden">Transaction section</h1>
+            </div>
+            <!-- transaction section end -->
           </div>
         </div>
       </div>
 
       <script src="./js/utilities.js"></script>
       <!-- <script src="./js/home.js"></script> -->
-       <script src="./js/addMoney.js"></script>
+      <script src="./js/addMoney.js"></script>
       <!-- <script src="./js/cashOut.js"></script> -->
-       <script src="./js/cashOut2.js"></script>
+      <script src="./js/cashOut2.js"></script>
       <script src="./js/features.js"></script>
     </main>
   </body>

@@ -13,3 +13,13 @@ function getTextFieldValueById(id) {
   const textNumber = parseFloat(textvalue);
   return textNumber;
 }
+
+function showSectionById(id) {
+  // hide all the sections
+  document.getElementById('addMoneyForm').classList.add('hidden');
+  document.getElementById('cashOutForm').classList.add('hidden');
+  document.getElementById('transactionSection').classList.add('hidden');
+
+  // show the section with the provide id as parameter
+  document.getElementById(id).classList.remove("hidden");
+}
