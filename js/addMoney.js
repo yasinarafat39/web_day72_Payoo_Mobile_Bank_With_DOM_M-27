@@ -20,6 +20,14 @@ document
           //   reset form
           document.getElementById("addMoneyInput").value = "";
           document.getElementById("pinNumber").value = "";
+
+          // add to transaction history
+          const p = document.createElement('p');
+          p.innerText = `Added: ${addMoney} Tk. New Balance: ${newBalance}`
+          console.log(p);
+          // should be a common function
+          document.getElementById('transactionContainer').appendChild(p);
+
         } else {
           alert("Please provide a valid amount.");
         }

@@ -16,7 +16,7 @@ document.getElementById("btnLogin").addEventListener("click", function (event) {
     alert("Phone number and PIN number cannot be empty");
   } else {
     // this is temporary
-    if (phoneNumber === "01817482739" && pinNumber === "12345") {
+    if (phoneNumber === "01817482739" && pinNumber === "1234") {
       console.log("you are logged in");
       window.location.href = "/home.html";
     } else {

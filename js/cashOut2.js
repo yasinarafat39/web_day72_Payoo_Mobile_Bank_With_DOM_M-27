@@ -21,6 +21,19 @@ document
           //   reset form
           document.getElementById("cashOutInputAmount").value = "";
           document.getElementById("cashOutpinNumber").value = "";
+
+
+          // add to transaction history
+          const div = document.createElement('div');
+          div.classList.add('bg-yellow-300');
+          div.innerHTML = `
+            <h4 class="text-2xl font-bold p-3">Cash Out:</h4>
+            <p>${cashOut} withdraw. New Balance ${newBalance}</p>
+          ` 
+          // should be a common function
+          document.getElementById('transactionContainer').appendChild(div);
+
+          
         } else {
           alert("Please provide a valid amount.");
         }
