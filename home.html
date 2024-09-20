@@ -34,15 +34,15 @@
 
             <!-- user action button start -->
             <div class="flex">
-              <button class="btn inline mr-7">Add Money</button>
-              <button class="btn inline">Cash Out</button>
+              <button id="btnShowAddMoney" class="btn inline mr-7">Add Money</button>
+              <button id="btnShowCashOut" class="btn inline">Cash Out</button>
             </div>
             <!-- user action button end -->
-            <div class="divider text-xs text-gray-400 hidden">Add Money</div> <!-- devider --> 
-            <div class="divider text-xs text-gray-400">Cash Out</div> <!-- devider --> 
+            <div id="addMoneyDevider" class="divider text-xs text-gray-400">Add Money</div> <!-- devider --> 
+            <div id="cashOutDevider" class="divider text-xs text-gray-400 hidden">Cash Out</div> <!-- devider --> 
 
             <!-- add money form start -->
-            <form class="card-body p-0 w-10/12 hidden">
+            <form id="addMoneyForm" class="card-body p-0 w-10/12">
               <div class="form-control">
                 <label class="label">
                   <span class="label-text">Amount</span>
@@ -76,7 +76,7 @@
             <!-- add money form end -->
 
             <!-- cash out form start -->
-            <form class="card-body p-0 w-10/12">
+            <form id="cashOutForm" class="card-body p-0 w-10/12 hidden">
               <div class="form-control">
                 <label class="label">
                   <span class="label-text">Amount</span>
@@ -114,6 +114,7 @@
 
       <script src="./js/home.js"></script>
       <script src="./js/cashOut.js"></script>
+      <script src="./js/features.js"></script>
     </main>
   </body>
 </html>
