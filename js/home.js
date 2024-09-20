@@ -6,11 +6,10 @@ document
     event.preventDefault();
     // console.log('add money clicked')
 
-
     // input money for add
     const addMoneyInputField = document.getElementById("addMoneyInput");
     const addMoneyInputValue = parseFloat(addMoneyInputField.value);
-
+    
     // pin number
     const pinNumberField = document.getElementById("pinNumber");
     const pinNumberValue = pinNumberField.value;
@@ -40,4 +39,4 @@ document
       addMoneyInputField.value = "";
       pinNumberField.value = "";
     }
-});
+  });
